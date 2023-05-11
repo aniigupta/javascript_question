@@ -1,6 +1,6 @@
 /**
  * @param {number[]} arr
- * @param {Function} fn
+ ** @param {Function} fn
  * @return {number[]}
  */
 var filter = function(arr, fn) {

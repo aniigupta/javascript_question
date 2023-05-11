@@ -1,5 +1,5 @@
 /**
- * @param {number[]} arr
+ ** @param {number[]} arr
  * @param {Function} fn
  * @return {number[]}
  */

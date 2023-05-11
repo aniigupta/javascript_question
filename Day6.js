@@ -1,22 +1,16 @@
 /**
- * @param {Function[]} functions
- * @return {Function}
+ * @param {number[]} nums
+ * @param {Function} fn
+ * @param {number} init
+ * @return {number}
  */
-var compose = function(functions) {
-    if (functions.length === 0) {
-     return function(x) { return x; };
-    } else {
-    return function(x) {
-      var result = functions[functions.length - 1](x);
-      for (var i = functions.length - 2; i >= 0; i--) {
-        result = functions[i](result);
-      }
-      return result;
-    };
-  }
+var reduce = function(nums, fn, init) {
+    if (nums.length === 0) {
+        return init;
+    }
+    let val = init;
+    for (let i = 0; i < nums.length; i++) {
+        val = fn(val, nums[i]);
+    }
+    return val;
 };
-
-/**
- * const fn = compose([x => x + 1, x => 2 * x])
- * fn(4) // 9
- */

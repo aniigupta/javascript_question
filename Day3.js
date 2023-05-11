@@ -28,4 +28,4 @@ var createCounter = function(init) {
  * counter.increment(); // 6
  * counter.reset(); // 5
  * counter.decrement(); // 4
- */
+ *///
